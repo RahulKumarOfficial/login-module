@@ -9,14 +9,14 @@ const styles = theme => ({
       flexWrap: 'wrap',
     },
    
-    bootstrapRoot: {
+    emailRoot: {
       padding: 0,
       'label + &': {
         marginTop: theme.spacing.unit * 3,
       },
     },
 
-    bootstrapInput: {
+    emailInput: {
       borderRadius: 4,
       backgroundColor: theme.palette.common.white,
       border: '2px solid black',
@@ -24,12 +24,12 @@ const styles = theme => ({
       padding: '10px 10px',
       width: 'calc(100% - 24px)',
     },
-    bootstrapFormLabel: {
+    emailFormLabel: {
       fontSize: 16,
     },
     
     formControl: {
-    margin: theme.spacing.unit,
+        margin: theme.spacing.unit,
     },
 
   });
@@ -42,13 +42,13 @@ class PrimaryComponent extends Component{
             <FormControl className={classes.formControl} id="textFieldEmail">
                 <TextField
                     defaultValue=""
-                    label="Username*"
+                    label="Email*"
                     id="bootstrap-input"
                     InputProps={{
                         disableUnderline: true,
                         classes: {
-                            root: classes.bootstrapRoot,
-                            input: classes.bootstrapInput,
+                            root: classes.emailRoot,
+                            input: classes.emailInput,
                         },
                     }}
                 />
