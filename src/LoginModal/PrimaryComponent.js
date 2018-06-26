@@ -41,6 +41,7 @@ class PrimaryComponent extends Component{
         return(
             <FormControl className={classes.formControl} id="textFieldEmail">
                 <TextField
+                    
                     defaultValue=""
                     label="Email*"
                     id="bootstrap-input"
@@ -51,6 +52,7 @@ class PrimaryComponent extends Component{
                             input: classes.emailInput,
                         },
                     }}
+                    
                 />
             </FormControl>
             
