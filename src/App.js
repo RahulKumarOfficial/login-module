@@ -14,16 +14,7 @@ class App extends Component {
     return (
       <div className="App">
       <Header />
-      <div id="makeThisCenter">
-        <Card id="paperForDisplay">
-          <CardContent id="displayEverythingInside">
-            <FormControl>
-              <PrimaryComponent/>   
-              <ButtonSubmit />    
-            </FormControl>            
-          </CardContent>
-        </Card>
-        </div>       
+            
         <div id="placeInBottom">
           <Footer />
         </div>  
