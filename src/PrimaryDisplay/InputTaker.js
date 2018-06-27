@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { withStyles} from '@material-ui/core/styles';
-
-  const styles = theme => ({
+import Button from '@material-ui/core/Button';
+const styles = theme => ({
     paper: {
       position: 'absolute',
       width: theme.spacing.unit * 50,
@@ -28,46 +28,62 @@ import { withStyles} from '@material-ui/core/styles';
       emailFormLabel: {
         fontSize: 16,
       },
+      formControl : {
+        width:300,
+      }
       
   });
-class InputTaker extends Component{
-    state = {
-        open: false,
-      };
-      handleOpen = () => {
-        this.setState({ open: true });
-      };
-    
-      handleClose = () => {
-        this.setState({ open: false });
-      };
-    constructor(props){
-        super(props);
-        
-    }
-    render(){
-        const { classes } = this.props;
-        return(
 
-           
-            <TextField                    
-            defaultValue=""
-            label="Email*"
-            id="bootstrap-input"
-            placeholder = "abc@email.com"
-            InputProps={{
-                disableUnderline: true,
-                classes: {
-                    root: classes.emailRoot,
-                    input: classes.emailInput,
-                },
-            }}
-            
-        />
-            
-        
-        )
+class InputTaker extends Component{
+  state = {
+      open: false,
+    };
+    handleOpen = () => {
+      this.setState({ open: true });
+    };
+  
+    handleClose = () => {
+      this.setState({ open: false });
+    };
+
+    showText = () => {
+      console.log("Button is pressed");
     }
+
+  render(){
+    const { classes } = this.props;
+    return(      
+      //rendering text field for email rendering button 
+      <form>
+      <br/>
+        <TextField                    
+          defaultValue=""
+          label="Email"
+          required
+          id="bootstrap-input"
+          placeholder = "abc@email.com"
+          className = {classes.formControl}
+          InputProps={{
+              disableUnderline: true,
+              classes: {
+                  root: classes.emailRoot,
+                  input: classes.emailInput,
+              },
+          }}            
+        />
+        <br/><br/>            
+        <Button 
+          variant="contained" 
+          size="large" 
+          color="primary" 
+          onClick={this.showText}
+          className = {classes.formControl}
+        >
+          Continue
+        </Button> 
+        </form>    
+    )
+  }
 }
 const InputTakerMod = withStyles(styles)(InputTaker);
 
