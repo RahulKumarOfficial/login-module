@@ -12,7 +12,7 @@
 
 .paper{
     position: relative;
-    width:500;
+    width:380;
     height: 300;
     background-color: white;
     padding:4;
@@ -24,8 +24,8 @@
 }
 
 #logo{
-    height:20%;
-    width:40%;
+    height:60;
+    width:180;
 }
 #logo2{
     height:60;

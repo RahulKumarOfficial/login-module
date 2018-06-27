@@ -46,6 +46,7 @@ class Header extends Component{
                             disableAutoFocus ={true}
                         >       
                             <div className="paper">
+                                <br />
                                 <InputTakerMod />
                             </div>                 
                         </Modal>                        

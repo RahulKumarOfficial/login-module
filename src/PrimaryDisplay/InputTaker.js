@@ -56,14 +56,14 @@ class InputTaker extends Component{
     return(      
       //rendering text field for email rendering button 
       <form>
-      <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo"/>
-      <br />
+        <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo" alt="Syrasoft logo"/>
+        <br />
         <TextField                    
           defaultValue=""
           label="Email"
           required
           id="bootstrap-input"
-          placeholder = "example@mail.com"
+          placeholder = "Enter your email "
           className = {classes.formControl}
           InputProps={{
               disableUnderline: true,
@@ -86,7 +86,7 @@ class InputTaker extends Component{
         >
           Continue
         </Button> 
-        </form>    
+      </form>    
     )
   }
 }
