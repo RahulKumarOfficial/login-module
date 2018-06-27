@@ -1,19 +1,7 @@
 import React, { Component } from 'react';
-import Modal from '@material-ui/core/Modal';
 import TextField from '@material-ui/core/TextField';
 import { withStyles} from '@material-ui/core/styles';
-function getModalStyle() {
-    const top = 50 ;
-    const left = 50 ;
-    const right = 50;
-  
-    return {
-      top: `${top}%`,
-      left: `${left}%`,
-      right: `${right}`,
-      transform: `translate(-${top}%, -${left}%,-${right}%)`,
-    };
-  }
+
   const styles = theme => ({
     paper: {
       position: 'absolute',
@@ -60,17 +48,13 @@ class InputTaker extends Component{
     render(){
         const { classes } = this.props;
         return(
-            <Modal
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-            open={this.state.open}
-            onClose={this.handleClose}
-            >
-            <div style={getModalStyle()} className={classes.paper}>
+
+           
             <TextField                    
             defaultValue=""
             label="Email*"
             id="bootstrap-input"
+            placeholder = "abc@email.com"
             InputProps={{
                 disableUnderline: true,
                 classes: {
@@ -80,8 +64,8 @@ class InputTaker extends Component{
             }}
             
         />
-            </div>
-        </Modal>
+            
+        
         )
     }
 }

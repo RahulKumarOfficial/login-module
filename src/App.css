@@ -13,6 +13,7 @@
    padding-right: 100;
    margin-left:10;
    margin-right:10;
+ 
    
 }
 #makeThisCenter{
@@ -28,8 +29,9 @@
 body{
     text-align: center;
     align-self: center;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    background-position-x: 10%;
+    background-position-y: -1%;
     background-repeat: no-repeat;
-    background-image: url("https://urbanfragment.files.wordpress.com/2012/07/hotel-grand-velas-riviera-nayarit-puerto-vallarta-mexico010.jpg");
+    background-image: url("./Building.jpg");
+    position: fixed;
 }
