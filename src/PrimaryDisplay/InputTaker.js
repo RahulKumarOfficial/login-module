@@ -56,36 +56,40 @@ class InputTaker extends Component{
     return(      
       //rendering text field for email rendering button 
       <form>
+        <Button  variant="fab" color="default"  id="cornerPlace"  onClick={this.handleClose} mini>
+          <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/twotone-highlight_off-white-18/round-close-24px.svg') }  alt="Close Icon"/>
+        </Button>
+          <br />
         <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo" alt="Syrasoft logo"/>
-        <br />
-        <TextField                    
-          defaultValue=""
-          label="Email"
-          required
-          id="bootstrap-input"
-          placeholder = "Enter your email "
-          className = {classes.formControl}
-          InputProps={{
-              disableUnderline: true,
-              classes: {
-                  root: classes.emailRoot,
-                  input: classes.emailInput,
-              },
-          }}
-          InputLabelProps={{
-            shrink: true,
-          }}            
-        />
-        <br/><br />        
-        <Button 
-          variant="contained" 
-          size="large" 
-          color="primary" 
-          onClick={this.showText}
-          className = {classes.formControl}
-        >
-          Continue
-        </Button> 
+          <br />
+          <TextField                    
+            defaultValue=""
+            label="Email"
+            required
+            id="bootstrap-input"
+            placeholder = "Enter your email "
+            className = {classes.formControl}
+            InputProps={{
+                disableUnderline: true,
+                classes: {
+                    root: classes.emailRoot,
+                    input: classes.emailInput,
+                },
+            }}
+            InputLabelProps={{
+              shrink: true,
+            }}            
+          />
+          <br/><br />        
+          <Button 
+            variant="contained" 
+            size="large" 
+            color="primary" 
+            onClick={this.showText}
+            className = {classes.formControl}
+          >
+            Continue
+          </Button> 
       </form>    
     )
   }
