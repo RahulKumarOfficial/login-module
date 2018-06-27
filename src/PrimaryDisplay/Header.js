@@ -1,7 +1,6 @@
 import React,{ Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import './Position.css';
 import Modal from '@material-ui/core/Modal';
@@ -31,9 +30,7 @@ class Header extends Component{
             <div>
                 <AppBar position="fixed" color="default">
                     <Toolbar>
-                        <Typography variant="title" color="inherit">
-                            Syrasoft Logo
-                        </Typography>
+                        <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo2" alt="Syrasoft logo"/>                    
                         <Button  
                             id="btnPlace" 
                             variant="raised" 
@@ -41,17 +38,16 @@ class Header extends Component{
                             disableRipple
                             onClick = {this.handleOpen}
                         >
-                            Sign Up
-                        </Button>
+                            Sign In
+                        </Button>                       
                         <Modal
-                        open = {this.state.open}
-                        onClose = {this.handleClose}
-                        disableAutoFocus ={true}
-                        keepMounted = {true}
+                            open = {this.state.open}
+                            onClose = {this.handleClose}
+                            disableAutoFocus ={true}
                         >       
-                        <div className="paper">
-                        <InputTakerMod />
-                        </div>                 
+                            <div className="paper">
+                                <InputTakerMod />
+                            </div>                 
                         </Modal>                        
                     </Toolbar>
                 </AppBar>

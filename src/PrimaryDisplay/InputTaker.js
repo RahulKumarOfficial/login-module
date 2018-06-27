@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import './Position.css'
 const styles = theme => ({
     paper: {
       position: 'absolute',
@@ -11,7 +12,7 @@ const styles = theme => ({
       padding: theme.spacing.unit * 4,
     },
     emailRoot: {
-        padding: 0,
+        padding: 2,
         'label + &': {
           marginTop: theme.spacing.unit * 3,
         },
@@ -55,13 +56,14 @@ class InputTaker extends Component{
     return(      
       //rendering text field for email rendering button 
       <form>
-      <br/>
+      <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo"/>
+      <br />
         <TextField                    
           defaultValue=""
           label="Email"
           required
           id="bootstrap-input"
-          placeholder = "abc@email.com"
+          placeholder = "example@mail.com"
           className = {classes.formControl}
           InputProps={{
               disableUnderline: true,
@@ -69,9 +71,12 @@ class InputTaker extends Component{
                   root: classes.emailRoot,
                   input: classes.emailInput,
               },
+          }}
+          InputLabelProps={{
+            shrink: true,
           }}            
         />
-        <br/><br/>            
+        <br/><br />        
         <Button 
           variant="contained" 
           size="large" 
