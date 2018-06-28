@@ -47,7 +47,7 @@ class Header extends Component{
                         >       
                             <div className="paper">
                                 <br />
-                                <InputTakerMod  name = {"Opening the input taker fields"} handleClose = {this.handleClose.bind(this)}/>
+                                <InputTakerMod  handleClose = {this.handleClose.bind(this)}/>
                             </div>                 
                         </Modal>                        
                     </Toolbar>

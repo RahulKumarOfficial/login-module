@@ -4,13 +4,6 @@ import { withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import './Position.css';
 const styles = theme => ({
-    paper: {
-      position: 'absolute',
-      width: theme.spacing.unit * 50,
-      backgroundColor: theme.palette.background.paper,
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing.unit * 4,
-    },
     emailRoot: {
         padding: 2,
         'label + &': {
@@ -35,25 +28,10 @@ const styles = theme => ({
 
 class InputTaker extends Component{
 
-
   state = {
       open: this.props.open,
   };
     
-  handleOpen = () => {
-      this.setState({ open: true });
-  };
-  
-  showText = () => {
-    console.log("Button is pressed");
-  }    
-
-  handleClose = () =>{
-    console.log("Requested to close the dialog");
-    this.setState({
-      open:false
-    })
-  }
 
   render(){
     const { classes } = this.props;
@@ -61,9 +39,7 @@ class InputTaker extends Component{
     return(      
       //rendering text field for email rendering button
        
-      <form 
-      open = {this.state.open}
-      >
+      <form>
         <Button  
         variant="fab" 
         color="default"  
@@ -71,7 +47,7 @@ class InputTaker extends Component{
         mini
         onClick = {this.props.handleClose}
         >
-          <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/twotone-highlight_off-white-18/round-close-24px.svg') }  alt="Close Icon"/>
+          <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/twotone-highlight_off-white-18/011.svg') }  alt="Close Icon"/>
         </Button>
           <br />
         <img src={ require('/home/techdragon/Desktop/syrasoft-login-module/src/PrimaryDisplay/Syrasoft-Connect-logo.png') } id="logo" alt="Syrasoft logo"/>
