@@ -43,11 +43,11 @@ class Header extends Component{
                         <Modal
                             open = {this.state.open}
                             onClose = {this.handleClose}
-                            disableAutoFocus ={true}
+                            disableAutoFocus ={true}                           
                         >       
                             <div className="paper">
                                 <br />
-                                <InputTakerMod />
+                                <InputTakerMod  name = {"Opening the input taker fields"} handleClose = {this.handleClose.bind(this)}/>
                             </div>                 
                         </Modal>                        
                     </Toolbar>
