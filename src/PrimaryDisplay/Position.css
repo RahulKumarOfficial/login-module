@@ -1,0 +1,39 @@
+#btnPlace{
+    right:5%;
+    position: fixed;
+}
+
+#textFieldEmail{
+    margin-top:100;  
+    margin-left: 500;
+    margin-right: 500;
+    
+}
+
+.paper{
+    position: relative;
+    width:380;
+    height: 300;
+    background-color: white;
+    padding:4;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    top:20%;    
+}
+
+#logo{
+    height:60;
+    width:180;
+}
+#logo2{
+    height:60;
+    width:180;
+    margin-left:5%;
+}
+
+#cornerPlace{
+    margin-left:96%;
+    margin-top:-10%;
+}

@@ -1,28 +1,37 @@
-.App {
-  text-align: center;
+
+#InputTaking{
+    left: 25%;
+    right:50%;
+    padding-right:25%;
+    
+}
+#placeInBottom{
+    bottom:0;
+    /* bottom:-100; */
+   position:fixed;
+   padding-left: 150;
+   padding-right: 100;
+   margin-left:10;
+   margin-right:10;
+ 
+   
+}
+#makeThisCenter{
+    
+    text-align: center;   
+    margin-bottom: 100;
+    position: sticky;
+    padding-left: 350;
+    padding-right: 300;
+    padding-bottom: 400;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+body{
+    text-align: center;
+    align-self: center;
+    background-position-x: 10%;
+    background-position-y: -1%;
+    background-repeat: no-repeat;
+    background-image: url("./Building.jpg");
+    position: fixed;
 }
