@@ -4,9 +4,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import './Position.css';
 import InputTakerMod from './InputTaker';
-//import Modal from 'react-bootstrap/lib/Modal';
-import Modal from '@material-ui/core/Modal';
-import ModalMaterial from './ModalMaterial';
 
 class Header extends Component{
     state = {
@@ -24,8 +21,6 @@ class Header extends Component{
             open : false
         });
     }
-
-
     render(){
         console.log("in parent",this.state.open)
         return( 
@@ -45,17 +40,11 @@ class Header extends Component{
                             }}
                         >
                             Sign In
-                        </Button>                       
-                      
+                        </Button>                                             
                     </Toolbar>
                 </AppBar>
-            
-               
-
-                        <InputTakerMod open={this.state.open} />
-                
-            </div>
-            
+                 <InputTakerMod open={this.state.open} />                
+            </div>            
         )
     }
 }

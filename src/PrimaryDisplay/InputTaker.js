@@ -1,12 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import TextField from '@material-ui/core/TextField';
 import { withStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import './Position.css';
 import Modal from '@material-ui/core/Modal';
-import { Typography } from '@material-ui/core';
-import PropTypes from 'prop-types'
-import {OverlayPanel} from 'primereact/components/overlaypanel/OverlayPanel';
+import PropTypes from 'prop-types';
 const divStyleHeader ={
   position: 'relative',
   top:'0',
