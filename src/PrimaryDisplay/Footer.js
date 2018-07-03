@@ -10,27 +10,27 @@ const styles = {
   },
 };
 
+
+
 class Footer extends React.Component {
   state = {
     value: 0,
   };
-
   handleChange = (event, value) => {
     this.setState({ value });
   };
 
   render() {
     const { value } = this.state;
-
+    const one = this.props.one;
+    console.log(one)
     return (
       <BottomNavigation
         value={value}
         onChange={this.handleChange}
         showLabels
-       
         id="fullwidth"
-      >
-        <BottomNavigationAction label="Recents"/>
+      >                           
         <BottomNavigationAction label="Favorites"  />
         <BottomNavigationAction label="FAQ"  />
         <BottomNavigationAction label="Contact Us"  />
@@ -39,5 +39,6 @@ class Footer extends React.Component {
     );
   }
 }
-
+const Recents = () => <h1>Hello Recents</h1>
+  
 export default withStyles(styles)(Footer);

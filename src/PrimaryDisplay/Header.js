@@ -3,9 +3,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import './Position.css';
-import Modal from '@material-ui/core/Modal';
 import InputTakerMod from './InputTaker';
-
+//import Modal from 'react-bootstrap/lib/Modal';
+import Modal from '@material-ui/core/Modal';
+import ModalMaterial from './ModalMaterial';
 
 class Header extends Component{
     state = {
@@ -26,6 +27,7 @@ class Header extends Component{
 
 
     render(){
+        console.log("in parent",this.state.open)
         return( 
             <div>
                 <AppBar position="fixed" color="default">
@@ -36,26 +38,26 @@ class Header extends Component{
                             variant="raised" 
                             color="primary" 
                             disableRipple
-                            onClick = {this.handleOpen}
+                            onClick = {()=>{
+                                this.setState({
+                                    open:true
+                                })
+                            }}
                         >
                             Sign In
                         </Button>                       
-                        <Modal
-                            open = {this.state.open}
-                            onClose = {this.handleClose}
-                            disableAutoFocus ={true}                           
-                        >       
-                            <div className="paper">
-                                <br />
-                                <InputTakerMod  handleClose = {this.handleClose.bind(this)}/>
-                            </div>                 
-                        </Modal>                        
+                      
                     </Toolbar>
                 </AppBar>
+            
+               
+
+                        <InputTakerMod open={this.state.open} />
                 
             </div>
             
         )
     }
 }
+
 export default Header;
