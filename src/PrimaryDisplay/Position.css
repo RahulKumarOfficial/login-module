@@ -67,15 +67,6 @@
   
     position: absolute;
 }
-/* .body-modal {
-    top:19%;
-    width: 500;
-    height: 60;
-    background-color: white;
-    margin-left: 35%;
-    margin-top:15%;
-    position: absolute;
-} */
 
 .paper-footer{
     top:28%;
@@ -90,31 +81,3 @@
     position: relative;
     top:100%;
 }
-/* 
-.header-modal{
-    position: relative;
-    top:0;
-    max-height: 10;
-    margin-bottom:20;
-    background:#6cf;
-}
-
-.content-modal{
-    position: relative;
-    height: 140;
-    padding-top:100;
-    padding-bottom:50;
-    background:#6cf;
-    
-}
-
-.footer-modal{
-    position: relative; 
-    height: 10;
-   max-height: 10;
-    background:#6cf;
-    margin-bottom: 5;
-    
-    
-
-} */
