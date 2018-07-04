@@ -4,12 +4,10 @@
 }
 
 #textFieldEmail{
-    margin-top:100;  
-    margin-left: 500;
-    margin-right: 500;
-    
+    top :0;
+    position: absolute;
+    width:200;
 }
-
 .paper{
     position: relative;
     width:380;
@@ -36,8 +34,8 @@
 
 #cornerPlace{
     margin-left:96%;
-    margin-top:-10%;
-    position: absolute;
+    margin-top:-3%;
+    position: relative;
 }
 
 .MainContainer{

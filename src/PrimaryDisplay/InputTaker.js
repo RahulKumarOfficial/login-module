@@ -15,7 +15,7 @@ const divStyleFooter = {
   position:' relative',
   height: '20',
  maxHeight: '200',
-  paddingTop:'30',
+  paddingTop:'25',
   marginBottom:' 30',
 }
 const divStyleBody = {
@@ -33,8 +33,8 @@ const divStyleBodyWithHeaderOnly = {
 }
 const divStyleBodyWithFooterOnly = {
   position: 'relative',
-  height: '140',
-  paddingTop:'90',
+  height: '150',
+  paddingTop:'80',
   paddingBottom:'40',
  
 }
@@ -61,11 +61,14 @@ const styles = theme => ({
   });
 
 class InputTaker extends Component{
+  
   state = {
-    open : this.props.open,
+    open :this.props.open,
+    
     show : true,
     HeaderProps : this.props.HeaderProps,
-    FooterProps : this.props.FooterProps
+    FooterProps : this.props.FooterProps,
+    ContentProps : this.props.ContentProps
   }
   componentWillReceiveProps(nextProps){
     this.setState({
@@ -74,7 +77,9 @@ class InputTaker extends Component{
   }
     
   render(){
-    console.log("Header is passed ? ",this.props.HeaderProps);
+   
+    console.log("in children",this.state.open);
+    console.log("Header is passed ? ",this.props.HeaderProps, console.log(this.state.HeaderProps));
     console.log("Footer is passed ?", this.state.FooterProps );
     const { classes } = this.props;
     
@@ -93,7 +98,7 @@ class InputTaker extends Component{
                 </div>
                 <hr />
                 <div style={divStyleBody}>
-                  Content here
+                  {this.state.ContentProps}
                 </div>
                 <hr />
                 <div style={divStyleFooter}>
@@ -114,7 +119,7 @@ class InputTaker extends Component{
               }}>        
               <div className = "body-modal">
                 <div style = {divStyleBodyWithFooterOnly}>
-                  Content here
+                {this.state.ContentProps}
                 </div>
                 <hr />
                 <div style={divStyleFooter}>
@@ -139,7 +144,7 @@ class InputTaker extends Component{
                 </div>
                 <hr />
                 <div style={divStyleFooter}>
-                  Content here
+                {this.state.ContentProps}
                 </div>
               </div>              
             </Modal>            
@@ -178,20 +183,21 @@ class InputTaker extends Component{
   }
 
 InputTaker.propTypes = {
-  open : PropTypes.bool
+  open : PropTypes.bool,
+  HeaderProps:PropTypes.object,
+  FooterProps:PropTypes.object,
+  ContentProps:PropTypes.object,
+  show:PropTypes.bool,
 }
 InputTaker.defaultProps = {
-  open:true
+  open:true,
+  label:"Email",
+  HeaderProps:undefined,
+  FooterProps:undefined,
+  ContentProps:undefined,
+  show:true,
 }
-InputTaker.propTypes = {
-  placeholder:PropTypes.string
-}
-InputTaker.defaultProps = {
-  placeholder:"Enter your email"
-}
-InputTaker.defaultProps = {
-  label:"Email"
-}
+
 
 const InputTakerMod = withStyles(styles)(InputTaker);
 
